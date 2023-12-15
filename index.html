@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Happy Birthday Surprise!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="teddy-bear.png" />
+  </head>
+  <body>
+    <div class="container" style="background-color: #ff99cc">
+      <header>
+        <h1>Happy Birthday, Rowmean!</h1>
+      </header>
+      <main>
+        <div class="message" id="messageSection">
+          <p id="messageContent">
+            This special collection of memories is just for you!
+          </p>
+        </div>
+        <div class="line" id="line" style="display: none"></div>
+        <div class="reveal-button" id="buttonSection">
+          <button onclick="openGift()">Open Your Gift</button>
+        </div>
+        <div class="gallery" style="display: none">
+          <div
+            class="slide"
+            onmousemove="showCaption(event, 'caption1')"
+            onmouseleave="hideCaption('caption1')"
+          >
+            <img
+              src="image1.jpg"
+              alt="Image 1"
+              onclick="openLightbox(this.src)"
+              class="gallery-image"
+            />
+            <div class="caption">You're so beautiful Babe</div>
+          </div>
+          <div
+            class="slide"
+            onmousemove="showCaption(event, 'caption1')"
+            onmouseleave="hideCaption('caption1')"
+          >
+            <img
+              src="image3.jpg"
+              alt="Image 1"
+              onclick="openLightbox(this.src)"
+              class="gallery-image"
+            />
+            <div class="caption">
+              Cherishing these wonderful memories with you.
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="image7.jpg"
+              alt="Image 1"
+              onclick="openLightbox(this.src)"
+              class="gallery-image"
+            />
+            <div class="caption">To the most amazing person in my life!</div>
+          </div>
+          <div class="slide">
+            <img
+              src="image4.jpg"
+              alt="Image 1"
+              onclick="openLightbox(this.src)"
+              class="gallery-image"
+            />
+            <div class="caption">Hi Barbie!</div>
+          </div>
+          <div class="slide">
+            <img
+              src="image10.jpg"
+              alt="Image 1"
+              onclick="openLightbox(this.src)"
+              class="gallery-image"
+            />
+            <div class="caption">Grateful for every moment spent together.</div>
+          </div>
+          <div class="slide">
+            <img
+              src="image6.jpg"
+              alt="Image 1"
+              onclick="openLightbox(this.src)"
+              class="gallery-image"
+            />
+            <div class="caption">
+              With you, every memory becomes extraordinary.
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="image5.jpg"
+              alt="Image 1"
+              onclick="openLightbox(this.src)"
+              class="gallery-image"
+            />
+            <div class="caption">
+              Every memory we create, a love story whispered in time's embrace.
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="image8.jpg"
+              alt="Image 1"
+              onclick="openLightbox(this.src)"
+              class="gallery-image"
+            />
+            <div class="caption">
+              Your laughter, the music that fills my heart with pure delight.
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="image9.jpg"
+              alt="Image 1"
+              onclick="openLightbox(this.src)"
+              class="gallery-image"
+            />
+            <div class="caption">
+              In every snapshot, your smile shines the brightest.
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="image17.jpg"
+              alt="Image 1"
+              onclick="openLightbox(this.src)"
+              class="gallery-image"
+            />
+            <div class="caption">
+              Your presence, a masterpiece, etched in my heart's gallery.
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="image 5.JPG"
+              alt="Image 1"
+              onclick="openLightbox(this.src)"
+              class="gallery-image"
+            />
+            <div class="caption">
+              Every moment with you, a painting of serenity and love.
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="image16.jpg"
+              alt="Image 1"
+              onclick="openLightbox(this.src)"
+              class="gallery-image"
+            />
+            <div class="caption">
+              With you, every captured moment is a love letter written by fate.
+            </div>
+          </div>
+        </div>
+        <div class="lightbox" onclick="closeLightbox()">
+          <img src="" alt="Lightbox Image" />
+        </div>
+        <div class="new-message" id="newMessage" style="display: none">
+          <p>Thank you for viewing the memories!</p>
+        </div>
+      </main>
+      <footer>
+        <p style="font-size: medium">© 2023 James</p>
+      </footer>
+    </div>
+    <img
+      src="december.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 10%; left: 5%"
+    />
+    <img
+      src="hdb.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 40%; left: 5%"
+    />
+    <img
+      src="twenty.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 40%; left: 85%"
+    />
+    <img
+      src="happy-birthday.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 10%; left: 85%"
+    />
+    <img
+      src="birthday-cake.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 70%; left: 85%"
+    />
+    <img
+      src="party-popper.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 70%; left: 5%"
+    />
+    <img
+      src="cakey.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 100%; left: 5%"
+    />
+    <img
+      src="balloo.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 100%; left: 85%"
+    />
+    <img
+      src="women.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 130%; left: 85%"
+    />
+    <img
+      src="gift.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 130%; left: 5%"
+    />
+    <img
+      src="birthday.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 160%; left: 5%"
+    />
+    <img
+      src="happy.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 160%; left: 85%"
+    />
+    <img
+      src="oneballon.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 190%; left: 85%"
+    />
+    <img
+      src="celebration.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 190%; left: 5%"
+    />
+    <img
+      src="birthdayy.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 250%; left: 5%"
+    />
+    <img
+      src="Line Stickers & Themes.gif"
+      alt="Balloon"
+      class="balloons"
+      style="top: 220%; left: 85%"
+    />
+    <img
+      src="d5mipxb-8ad10d40-f6b7-4f47-a641-a728aa0e4a93.gif"
+      alt="Balloon"
+      class="balloons"
+      style="top: 220%; left: 5%"
+    />
+    <img
+      src="cake.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 250%; left: 85%"
+    />
+    <img
+      src="happyy.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 280%; left: 85%"
+    />
+    <img
+      src="doll.png"
+      alt="Balloon"
+      class="balloons"
+      style="top: 280%; left: 5%"
+    />
+    <div class="birthday-message">
+      <h2>Happy Birthday, Babe!</h2>
+      <h2>I Love You!</h2>
+    </div>
+    <canvas id="fireworksCanvas"></canvas>
+    <div id="balloonContainer"></div>
+    <div class="firework"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

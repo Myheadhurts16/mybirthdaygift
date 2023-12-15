@@ -1,0 +1,332 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background: linear-gradient(45deg, #ff99cc, #ff0066);
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ff99cc;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 2px solid #ff0066;
+}
+
+h1 {
+  font-size: 60px;
+  color: #ff0066;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: heartbeat 1.5s infinite;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body {
+  background-image: linear-gradient(45deg, #ff99cc, #ff0066);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  transition: color 0.5s ease-in-out;
+}
+
+footer {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+footer:hover {
+  background-color: #ff99cc;
+  transform: scale(1.05);
+}
+
+.balloons {
+  width: 200px;
+  position: absolute;
+  animation: balloonAnimation 8s infinite;
+}
+
+.balloons:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.balloons:nth-child(2) {
+  animation-delay: 2s;
+}
+
+@keyframes balloonAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.main-content {
+  padding: 20px;
+}
+#messageContent {
+  font-size: 23px;
+  font-weight: bold;
+}
+.new-message {
+  font-size: 25px;
+  font-weight: bold;
+}
+.message-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slide-up 1s ease-in-out;
+  font-size: medium;
+  font-weight: bold;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.reveal-button {
+  margin-bottom: 20px;
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #ff0066;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #e6005c;
+  transform: scale(1.05);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  display: none;
+  animation: fade-in 1s ease-in-out;
+}
+
+.slide {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 30%;
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.slide .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Other CSS styles... */
+
+.slide .image-container {
+  position: relative;
+  display: inline-block;
+}
+@keyframes zoom-in {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.slide:hover .caption {
+  opacity: 1;
+}
+
+.slide img:hover {
+  transform: scale(1.05);
+  filter: brightness(80%);
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+
+.firework {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #ffcc00;
+  border-radius: 50%;
+  opacity: 0;
+  animation: fireworks 1s ease-out infinite;
+}
+
+@keyframes fireworks {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+.balloon {
+  position: absolute;
+  animation: balloonRising linear 10s infinite;
+}
+
+@keyframes balloonRising {
+  0% {
+    bottom: 0;
+    opacity: 0;
+    transform: translateY(0) scale(0.1);
+  }
+  100% {
+    bottom: 100%;
+    opacity: 1;
+    transform: translateY(-100%) scale(0.3);
+  }
+}
+.gallery-image {
+  width: 30%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.birthday-message {
+  position: absolute;
+  top: 2700px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  background-color: linear-gradient(45deg, #ff99cc, #ff0066);
+  text-shadow: black;
+  text-align: center;
+  z-index: 999;
+}
+
+.birthday-message h2 {
+  font-size: 100px;
+  color: #ff0066;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
